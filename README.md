@@ -1,11 +1,13 @@
 
+THIS IS A **MACBOOK VERSION** adapted from the original Windows version.
+
 # 🎧 Ecoute
 
 Ecoute is a live transcription tool that provides real-time transcripts for both the user's microphone input (You) and the user's speakers output (Speaker) in a textbox. It also generates a suggested response using OpenAI's GPT-3.5 for the user to say based on the live transcription of the conversation.
 
 ## 📖 Demo
 
-https://github.com/SevaSk/ecoute/assets/50382291/8ac48927-8a26-49fd-80e9-48f980986208
+<https://github.com/SevaSk/ecoute/assets/50382291/8ac48927-8a26-49fd-80e9-48f980986208>
 
 Ecoute is designed to help users in their conversations by providing live transcriptions and generating contextually relevant responses. By leveraging the power of OpenAI's GPT-3.5, Ecoute aims to make communication more efficient and enjoyable.
 
@@ -15,22 +17,13 @@ Follow these steps to set up and run Ecoute on your local machine.
 
 ### 📋 Prerequisites
 
-- Python >=3.8.0
+- Install the virtual audio driver [**Blackhole**](https://github.com/ExistentialAudio/BlackHole) and configure [**Multi-Output Device**](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) as directed. [Howfinity](https://www.youtube.com/@Howfinity)'s clip <https://youtu.be/LSmM5FXzVBg> is recommended for details.
+- 3.8.0 <=  Python < 3.10.0
 - An OpenAI API key
-- Windows OS (Not tested on others)
-- FFmpeg 
+- MacOSX
+- FFmpeg
 
-If FFmpeg is not installed in your system, you can follow the steps below to install it.
-
-First, you need to install Chocolatey, a package manager for Windows. Open your PowerShell as Administrator and run the following command:
-```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-```
-Once Chocolatey is installed, you can install FFmpeg by running the following command in your PowerShell:
-```
-choco install ffmpeg
-```
-Please ensure that you run these commands in a PowerShell window with administrator privileges. If you face any issues during the installation, you can visit the official Chocolatey and FFmpeg websites for troubleshooting.
+If FFmpeg is not installed in your system, you can install it using Homebrew.
 
 ### 🔧 Installation
 
@@ -51,7 +44,7 @@ Please ensure that you run these commands in a PowerShell window with administra
    ```
    pip install -r requirements.txt
    ```
-   
+
 4. Create a `keys.py` file in the ecoute directory and add your OpenAI API key:
 
    - Option 1: You can utilize a command on your command prompt. Run the following command, ensuring to replace "API KEY" with your actual OpenAI API key:
@@ -61,10 +54,11 @@ Please ensure that you run these commands in a PowerShell window with administra
       ```
 
    - Option 2: You can create the keys.py file manually. Open up your text editor of choice and enter the following content:
-   
+
       ```
       OPENAI_API_KEY="API KEY"
       ```
+
       Replace "API KEY" with your actual OpenAI API key. Save this file as keys.py within the ecoute directory.
 
 ### 🎬 Running Ecoute

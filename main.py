@@ -2,7 +2,7 @@ import threading
 from AudioTranscriber import AudioTranscriber
 from GPTResponder import GPTResponder
 import customtkinter as ctk
-import AudioRecorder 
+import AudioRecorder
 import queue
 import time
 import torch
@@ -121,7 +121,7 @@ def main():
 
     update_transcript_UI(transcriber, transcript_textbox)
     update_response_UI(responder, response_textbox, update_interval_slider_label, update_interval_slider, freeze_state)
- 
+
     root.mainloop()
 
 if __name__ == "__main__":
